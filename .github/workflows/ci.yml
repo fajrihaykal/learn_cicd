@@ -1,4 +1,4 @@
-name: CI - Build and Test Docker Image
+iname: CI - Build and Test Docker Image
 
 on:
   push:
@@ -31,7 +31,7 @@ jobs:
       - name: Integration test
         run: |
           curl --retry 10 \
-               --retry-connrefused \
+               --retry-all-errors \
                --retry-delay 2 \
                --fail http://localhost:8080/ \
                | grep -Fq '<h1>Halo, CI/CD!</h1>'
