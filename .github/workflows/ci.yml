@@ -34,7 +34,7 @@ jobs:
                --retry-connrefused \
                --retry-delay 2 \
                --fail http://localhost:8080/ \
-               | grep -Fq '<h1>Halo, DevOps!</h1>'
+               | grep -Fq '<h1>Halo, CI/CD!</h1>'
 
           echo "Integration test berhasil!"
 
